@@ -3,41 +3,527 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Banoth Vasu | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="Portfolio of Banoth Vasu - Full Stack Developer specializing in Java, Spring Boot, and React">
+  <title>Banoth Vasu | Full Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 </head>
 <body>
+  <!-- Animated Background Elements -->
+  <div class="bg-elements">
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    <div class="bg-circle circle-3"></div>
+    <div class="bg-grid"></div>
+  </div>
 
-  <header>
-    <h1>Banoth Vasu</h1>
-    <p>Software Development Intern</p>
-  </header>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-icon"><i class="fas fa-code"></i></span>
+        <h2>Vasu<span class="dot">.</span></h2>
+      </a>
+      
+      <div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active"><span>01.</span>Home</a></li>
+        <li><a href="#projects" class="nav-link"><span>02.</span>Projects</a></li>
+        <li><a href="#skills" class="nav-link"><span>03.</span>Skills</a></li>
+        <li><a href="#experience" class="nav-link"><span>04.</span>Experience</a></li>
+        <li><a href="#contact" class="nav-link"><span>05.</span>Contact</a></li>
+      </ul>
+      
+      <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+      </div>
+    </div>
+  </nav>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am a software development enthusiast with hands-on experience in
-      building web applications and RESTful APIs.
-    </p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <p class="hero-subtitle"><i class="fas fa-hand-wave"></i> Hello, I'm</p>
+        <h1 class="hero-title">
+          <span class="title-line">Banoth <span class="highlight">Vasu</span></span>
+        </h1>
+        
+        <div class="typing-container">
+          <p class="typing-text" id="typingText"></p>
+        </div>
+        
+        <p class="hero-desc">
+          A passionate <span class="highlight-text">Full Stack Developer</span> crafting robust digital solutions 
+          with clean code and modern technologies. Currently building scalable applications 
+          with Java, Spring Boot, and React.
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Get In Touch</span>
+            <i class="fas fa-paper-plane"></i>
+          </a>
+        </div>
+        
+        <div class="hero-social">
+          <a href="https://github.com/Vasubanoth" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/vasu-banoth-a642842ab" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:banothvasubunny@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="visual-card">
+          <div class="card-inner">
+            <div class="code-window">
+              <div class="window-header">
+                <div class="window-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="window-title">portfolio.java</span>
+              </div>
+              <div class="code-content">
+                <pre><code class="language-java">// Full Stack Developer
+public class BanothVasu {
+  private String role = "Full Stack Developer";
+  private String[] skills = {
+    "Java", "Spring Boot", "React", 
+    "JavaScript", "MySQL", "REST APIs"
+  };
+  
+  public void buildProject() {
+    System.out.println("Crafting digital solutions...");
+  }
+  
+  public static void main(String[] args) {
+    BanothVasu dev = new BanothVasu();
+    dev.buildProject();
+  }
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Java, Spring Boot</li>
-      <li>React Basics</li>
-    </ul>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">02.</span>
+        <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+        <p class="section-subtitle">A selection of my recent work</p>
+      </div>
+      
+      <div class="project-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-category="backend">
+          <div class="project-img">
+            <div class="img-placeholder">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Vasubanoth" target="_blank" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          
+          <div class="project-content">
+            <div class="project-header">
+              <h3>E-Commerce Backend API</h3>
+              <div class="project-badges">
+                <span class="badge badge-primary">Spring Boot</span>
+                <span class="badge">Java</span>
+                <span class="badge">H2 Database</span>
+              </div>
+            </div>
+            
+            <p class="project-desc">
+              Developed a scalable backend E-Commerce application using Java and Spring Boot, implementing a layered architecture (Controller, Service, Repository) to ensure modularity and ease of testing.
+            </p>
+            
+            <ul class="project-features">
+              <li><i class="fas fa-check-circle"></i> Built RESTful APIs for product management & authentication</li>
+              <li><i class="fas fa-check-circle"></i> Spring Security for secure access & authorization flows</li>
+              <li><i class="fas fa-check-circle"></i> Integrated JPA/Hibernate with H2 database</li>
+              <li><i class="fas fa-check-circle"></i> Comprehensive API testing with Postman</li>
+            </ul>
+            
+            <div class="project-footer">
+              <div class="tech-tags">
+                <span>Spring Boot</span>
+                <span>JPA/Hibernate</span>
+                <span>Spring Security</span>
+                <span>REST APIs</span>
+                <span>Postman</span>
+                <span>Agile</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-img">
+            <div class="img-placeholder">
+              <i class="fas fa-hotel"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Vasubanoth" target="_blank" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Hotel Management System</h3>
+              <div class="project-badges">
+                <span class="badge badge-primary">Java</span>
+                <span class="badge">JDBC</span>
+                <span class="badge">MySQL</span>
+              </div>
+            </div>
+            
+            <p class="project-desc">
+              Developed a console-based Hotel Reservation System in Java using JDBC and MySQL, enabling efficient user data management with well-structured relational schemas.
+            </p>
+            
+            <ul class="project-features">
+              <li><i class="fas fa-check-circle"></i> Role-based Admin & Customer functionalities</li>
+              <li><i class="fas fa-check-circle"></i> Data validation & exception handling</li>
+              <li><i class="fas fa-check-circle"></i> Optimized database queries with ACID compliance</li>
+              <li><i class="fas fa-check-circle"></i> System-level testing & performance verification</li>
+            </ul>
+            
+            <div class="project-footer">
+              <div class="tech-tags">
+                <span>Core Java</span>
+                <span>JDBC</span>
+                <span>MySQL</span>
+                <span>CRUD Operations</span>
+                <span>Console-based</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: example@email.com</p>
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">03.</span>
+        <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+        <p class="section-subtitle">Technologies I work with</p>
+      </div>
+      
+      <div class="skills-container">
+        <div class="skills-categories">
+          <!-- Languages -->
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-code category-icon"></i>
+              <h3>Languages</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Java</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="95"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">SQL</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="90"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">HTML/CSS</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="95"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Frameworks -->
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-cogs category-icon"></i>
+              <h3>Frameworks & Libraries</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag tag-highlight">Spring Boot</span>
+              <span class="skill-tag">Spring Security</span>
+              <span class="skill-tag">Hibernate</span>
+              <span class="skill-tag">JPA</span>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">JDBC</span>
+            </div>
+          </div>
+          
+          <!-- Tools -->
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-tools category-icon"></i>
+              <h3>Tools & Technologies</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">H2 Database</span>
+              <span class="skill-tag">IntelliJ IDEA</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Maven</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">04.</span>
+        <h2 class="section-title">Experience & <span class="highlight">Education</span></h2>
+        <p class="section-subtitle">My journey so far</p>
+      </div>
+      
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Software Development Intern</h3>
+              <span class="timeline-date">July 2025 – Aug 2025</span>
+            </div>
+            <h4 class="timeline-company">Tamizhan Skills</h4>
+            <p class="timeline-desc">
+              Developed secure REST APIs using Spring Boot and integrated them with React frontend applications.
+              Collaborated with cross-functional teams to deliver scalable software solutions.
+            </p>
+            <div class="timeline-tags">
+              <span>Spring Boot</span>
+              <span>React</span>
+              <span>REST APIs</span>
+              <span>Axios</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Experience 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Head of Operations</h3>
+              <span class="timeline-date">Technex'25 - IIT BHU</span>
+            </div>
+            <h4 class="timeline-company">Position of Responsibility</h4>
+            <p class="timeline-desc">
+              Led operational planning and execution for a major techno-management festival with 10,000+ participants.
+              Managed cross-functional teams and coordinated logistics for 50+ events.
+            </p>
+            <div class="timeline-tags">
+              <span>Leadership</span>
+              <span>Event Management</span>
+              <span>Team Coordination</span>
+              <span>Problem Solving</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Education -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Bachelor of Technology</h3>
+              <span class="timeline-date">2022 – 2026</span>
+            </div>
+            <h4 class="timeline-company">Mining Engineering</h4>
+            <p class="timeline-desc">
+              Pursuing degree in Mining Engineering while developing strong software engineering skills through self-study and projects.
+              Focused on problem-solving, analytical thinking, and systematic approach to complex challenges.
+            </p>
+            <div class="timeline-tags">
+              <span>Problem Solving</span>
+              <span>Analytical Thinking</span>
+              <span>Systematic Approach</span>
+              <span>Project Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">05.</span>
+        <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+        <p class="section-subtitle">Let's build something amazing together</p>
+      </div>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email Me</h4>
+              <p>banothvasubunny@gmail.com</p>
+              <a href="mailto:banothvasubunny@gmail.com" class="contact-link">Send Message <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Location</h4>
+              <p>Based in India</p>
+              <p class="contact-note">Open to remote opportunities worldwide</p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Availability</h4>
+              <p>Open for Opportunities</p>
+              <p class="contact-note">Full-time & Internship Roles</p>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Full Name" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Email Address" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="text" id="subject" placeholder="Subject" required>
+          </div>
+          
+          <div class="form-group">
+            <textarea id="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-submit">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Banoth Vasu</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-icon"><i class="fas fa-code"></i></span>
+          <h3>Banoth Vasu</h3>
+          <p>Full Stack Developer</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#experience">Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Connect</h4>
+            <div class="footer-social">
+              <a href="https://github.com/Vasubanoth" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/vasu-banoth-a642842ab" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:banothvasubunny@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Banoth Vasu. Built with dedication and code.</p>
+        <p class="footer-note">Open to new opportunities and collaborations</p>
+      </div>
+    </div>
   </footer>
 
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
