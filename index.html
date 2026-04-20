@@ -207,14 +207,15 @@
       letter-spacing: -0.5px;
       margin-bottom: 26px;
     }
-    .hero-name .line1 { 
-      display: block; 
+    /* Both name lines now use the same gradient & solid fill (no stroke) */
+    .hero-name .line1, 
+    .hero-name .line2 {
+      display: block;
       background: linear-gradient(135deg, #fff 30%, var(--accent-cyan) 80%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    .hero-name .line2 { display: block; color: transparent; -webkit-text-stroke: 2px var(--accent-cyan); }
     .hero-desc {
       max-width: 600px;
       font-size: 17px; color: var(--text-muted);
@@ -448,7 +449,7 @@
           </div>
         </div>
         <div class="hero-right reveal visible">
-          
+          <!-- Local image path: place your photo as 'assets/profile.png' relative to this HTML file -->
           <img class="profile-image" src="assets/profile.png" alt="Banoth Vasu profile photo" onerror="this.src='https://placehold.co/400x400/1a2538/00e5ff?text=Banoth+Vasu'">
         </div>
       </div>
