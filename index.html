@@ -199,27 +199,22 @@
       display: flex; align-items: center; gap: 12px;
     }
     .hero-tagline::before { content: ''; width: 38px; height: 1px; background: var(--accent-cyan); display: inline-block; }
-    
-    /* Side-by-side name styling */
     .hero-name {
       font-family: 'Inter', sans-serif;
       font-size: clamp(50px, 7vw, 86px);
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.06;
       letter-spacing: -0.5px;
       margin-bottom: 26px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25em;
     }
-    .hero-name span {
-      display: inline-block;
+    .hero-name .line1 { 
+      display: block; 
       background: linear-gradient(135deg, #fff 30%, var(--accent-cyan) 80%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    /* Optional: add a tiny space after Banoth if needed */
+    .hero-name .line2 { display: block; color: transparent; -webkit-text-stroke: 2px var(--accent-cyan); }
     .hero-desc {
       max-width: 600px;
       font-size: 17px; color: var(--text-muted);
@@ -257,9 +252,6 @@
         width: 180px;
         height: 180px;
         margin-top: 20px;
-      }
-      .hero-name {
-        justify-content: center;
       }
     }
 
@@ -410,7 +402,7 @@
       .container { padding: 0 20px; }
       .nav-links { display: none; }
       .about-grid, .project-grid, .lead-grid { grid-template-columns: 1fr; }
-      .hero-name { font-size: 48px; }
+      .hero-name { font-size: 58px; }
       .section-title { font-size: 32px; }
       .edu-card { flex-direction: column; }
       .edu-right { text-align: left; }
@@ -443,8 +435,8 @@
         <div class="hero-left">
           <div class="hero-tagline reveal visible">data scientist · AI engineer</div>
           <h1 class="hero-name reveal visible">
-            <span>Banoth</span>
-            <span>Vasu</span>
+            <span class="line1">Banoth</span>
+            <span class="line2">Vasu</span>
           </h1>
           <p class="hero-desc reveal visible">
             <strong>Building at the intersection of ML, NLP & generative AI</strong> — I turn raw data into intelligent systems.
@@ -456,7 +448,7 @@
           </div>
         </div>
         <div class="hero-right reveal visible">
-          <!-- Replace with your actual image path or URL -->
+          
           <img class="profile-image" src="assets/profile.png" alt="Banoth Vasu profile photo" onerror="this.src='https://placehold.co/400x400/1a2538/00e5ff?text=Banoth+Vasu'">
         </div>
       </div>
@@ -591,84 +583,45 @@
       <div class="lead-grid">
         <div class="lead-card reveal">
           <div class="lead-role">Operations Head</div>
-          <div class="lead-org">Technexorg">Technex 2025 · 2025 · IIT BHU IIT BHU</</div>
-          <div class="lead-ddiv>
-          <div class="lead-desc">esc">Managed 60k+ attendeesManaged 60k+ attendees, 15+, 15+ events, events, and led 120 volunteers for and led 120 volunteers for Asia's largest tech Asia's largest tech fest.</div>
- fest.</div>
-        </        </divdiv>
-       >
-        <div class="lead <div class="lead-card reveal-card reveal">
-          <div class="">
-          <div class="lead-lead-role">role">Publicity Manager</Publicity Manager</div>
-         div>
-          <div class="lead <div class="lead-org-org">Spardha">Spardha 2024</ 2024</divdiv>
-         >
-          <div class="lead <div class="lead-desc">Nationwide-desc">Nationwide campaigns driving 2,200 campaigns driving 2,200+ athletes+ athletes to one of India to one of India's largest sports fests.</'s largest sports fests.</div>
-        </divdiv>
+          <div class="lead-org">Technex 2025 · IIT BHU</div>
+          <div class="lead-desc">Managed 60k+ attendees, 15+ events, and led 120 volunteers for Asia's largest tech fest.</div>
         </div>
-       >
-        <div class="lead-card reveal <div class="lead-card reveal">
-          <">
-         div class=" <div class="lead-lead-role">Merit Certificate</role">Merit Certificate</div>
-         div>
-          <div class <div class="lead-org">C="lead-org">Coding Ninjas ·oding Ninjas · IIT IIT Guwahati</div Guwah>
-         ati</div>
-          <div <div class="lead-desc class="lead-desc">Break">Break into into Data Science & Analytics — Data Science & Analytics — comprehensive program, awarded comprehensive program, awarded  2025.</div>
-        </2025.</div>
-       div>
-      </ </div>
-      </divdiv>
-    </section>
-    </>
-
-    <section idsection>
-
-    <section id="contact">
-      <div="contact">
-      <div class="reveal">
-        class="reveal">
-        <div class="contact-t <div class="contact-tag">ag">06 / connect</06 / connect</divdiv>
-       >
-        <h2 <h2 class="contact-headline"> class="contact-headline">Let's build <span>Let's build <span>something greatsomething great</span</span></h></h2>
-       2>
-        <p class <p class="contact-sub">="contact-sub">Open to research collaborationsOpen to research collaborations, internships, internships, and, and full-time opportunities in Data Science and AI.</p full-time opportunities in Data Science and AI.</p>
-       >
-        <div <div class=" class="contact-btnscontact-btns">
-         ">
-          <a <a href=" href="mailmailto:vasto:vasubanubanoth07@gmail.com" targetoth07@gmail.com" target="_blank" class="_blank" class="btn="btn-primary">vasub-primary">vasubanothanoth07@gmail07@gmail.com</a.com</a>
-         >
-          <a href="https <a href="https://www://www.linkedin.com.linkedin.com/in//in/vasubanothvasubanoth07/"07/" target="_blank" target="_ class="blank" class="btn-outbtn-outline">LinkedInline">LinkedIn</a</a>
-          <a>
-          <a href=" href="https://https://github.comgithub.com/Vas/Vasubanubanoth" target="_blank" class="btn-outoth" target="_blank" class="btn-outline">line">GitHubGitHub</a>
-       </a>
+        <div class="lead-card reveal">
+          <div class="lead-role">Publicity Manager</div>
+          <div class="lead-org">Spardha 2024</div>
+          <div class="lead-desc">Nationwide campaigns driving 2,200+ athletes to one of India's largest sports fests.</div>
         </div>
-        <div </div>
-        <div class="contact- class="contact-phone">phone">+91 707+91 7075696075696077 · Khamm7 · Khammam,am, Telang Telangana</div>
+        <div class="lead-card reveal">
+          <div class="lead-role">Merit Certificate</div>
+          <div class="lead-org">Coding Ninjas · IIT Guwahati</div>
+          <div class="lead-desc">Break into Data Science & Analytics — comprehensive program, awarded 2025.</div>
+        </div>
       </div>
     </section>
 
-   ana</div>
+    <section id="contact">
+      <div class="reveal">
+        <div class="contact-tag">06 / connect</div>
+        <h2 class="contact-headline">Let's build <span>something great</span></h2>
+        <p class="contact-sub">Open to research collaborations, internships, and full-time opportunities in Data Science and AI.</p>
+        <div class="contact-btns">
+          <a href="mailto:vasubanoth07@gmail.com" target="_blank" class="btn-primary">vasubanoth07@gmail.com</a>
+          <a href="https://www.linkedin.com/in/vasubanoth07/" target="_blank" class="btn-outline">LinkedIn</a>
+          <a href="https://github.com/Vasubanoth" target="_blank" class="btn-outline">GitHub</a>
+        </div>
+        <div class="contact-phone">+91 7075696077 · Khammam, Telangana</div>
       </div>
     </section>
 
     <footer class="footer">
-      <footer class="footer">
-      <span <span>© 2025 Ban>© 2025 Banoth Vasu — IIToth Vasu — IIT (B (BHU)</span>
-     HU)</span>
-      <span>built with <span>built with <span <span style="color: style="color:var(--accentvar(--accent-cyan-cyan);">);">⟡</span>⟡</span> & & data</ data</spanspan>
+      <span>© 2025 Banoth Vasu — IIT (BHU)</span>
+      <span>built with <span style="color:var(--accent-cyan);">⟡</span> & data</span>
     </footer>
   </div>
 
   <script>
-    const dot =>
-    </footer>
-  </div>
-
-  <script>
-    const dot = document.getElementById('cursorDot document.getElementById('cursorDot');
-    const ring = document.getElementById');
-    const ring = document.getElementById('cursor('cursorRing');
-    let mouseXRing');
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
     let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
 
     document.addEventListener('mousemove', (e) => {
@@ -679,60 +632,30 @@
 
     (function smoothRing() {
       ringX += (mouseX - ringX) * 0.12;
-      ringY += ( = 0, mouseY = 0, ringX = 0, ringY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX; mouseY = e.clientY;
-      dot.style.left = mouseX - 4 + 'px';
-      dot.style.top = mouseY - 4 + 'px';
-    });
-
-    (function smoothRing() {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseYmouseY - ring - ringY) * Y) * 0.120.12;
-      ring;
-      ring.style.left = ring.style.left = ringX -X - 21 21 + 'px + 'px';
-      ring';
-      ring.style.top = ring.style.top = ringY -Y - 21 + ' 21 + 'px';
-      requestpx';
-      requestAnimationFrameAnimationFrame(smooth(smoothRingRing);
-    }));
+      ringY += (mouseY - ringY) * 0.12;
+      ring.style.left = ringX - 21 + 'px';
+      ring.style.top = ringY - 21 + 'px';
+      requestAnimationFrame(smoothRing);
     })();
 
-   ();
-
-    document.querySelector document.querySelectorAll('All('a,a, button').forEach(el button').forEach(el => => {
-      el {
-      el.addEventListener('.addEventListener('mouseentermouseenter', () =>', () { dot.style => { dot.style.transform =.transform = 'scale 'scale(2(2.5.5)';)'; ring.style.width = ring.style '56.width = '56px'; ring.stylepx';.height = ring.style.height = '56 '56px';px'; ring.style ring.style.borderColor =.borderColor = '#9 '#9b4b4dffdff'; });
-      el.addEventListener(''; });
-      el.addEventListener('mouseleavemouseleave', ()', () => { => { dot.style dot.style.transform.transform = 'scale = 'scale(1(1)'; ring.style)'; ring.style.width =.width = '42px'; '42px'; ring.style.height = '42 ring.style.height = '42px';px'; ring.style ring.style.borderColor.borderColor = '#00 = '#00e5ff';e5ff'; });
-    });
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => { dot.style.transform = 'scale(2.5)'; ring.style.width = '56px'; ring.style.height = '56px'; ring.style.borderColor = '#9b4dff'; });
+      el.addEventListener('mouseleave', () => { dot.style.transform = 'scale(1)'; ring.style.width = '42px'; ring.style.height = '42px'; ring.style.borderColor = '#00e5ff'; });
     });
 
-    const progress });
-
-    const progress = document = document.getElementById('.getElementById('scroll-proscroll-progressgress');
-    window');
-    window.addEventListener('scroll', () =>.addEventListener('scroll', () => {
-      const h {
-      const h = document = document.documentElement.sc.documentElement.scrollHeightrollHeight - window - window.innerHeight;
-     .innerHeight;
-      progress.style progress.style.width =.width = (document (document.document.documentElement.scrollTopElement.scrollTop / h / h *  * 100)100) + '% + '%';
-   ';
+    const progress = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (document.documentElement.scrollTop / h * 100) + '%';
     });
 
-    });
-
-    const observer = new IntersectionObserver((entries) const observer = new IntersectionObserver((entries) => => {
-      entries {
-      entries.forEach(e.forEach(e => { => { if ( if (e.ise.isIntersectingIntersecting) e) e.target.classList.add('.target.classListvisible');.add('visible'); });
-    });
-    }, { threshold: }, { threshold: 0 0.12.12 });
-    document.querySelector });
-    document.querySelectorAll('.revealAll('.reveal').forEach').forEach(r =>(r => observer. observer.observe(robserve(r));
-  </));
-  </scriptscript>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
+  </script>
 </body>
-</>
-</body>
-</htmlhtml>
+</html>
+
+
+make the name straight with same font and color (it is actually vasu under the banoth with different colour and font ) in the code
