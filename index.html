@@ -148,6 +148,43 @@
     margin-top:14px; font-family:'Space Mono', monospace; font-size:11.5px; color:var(--text-muted);
     display:flex; justify-content:space-between; letter-spacing:1px; border-top:1px solid var(--line-mid); padding-top:8px;
   }
+  .core-frame img{cursor:zoom-in;}
+
+  /* ============ LIGHTBOX ============ */
+  #lightbox{
+    position:fixed; inset:0; z-index:500; display:none;
+    align-items:center; justify-content:center;
+    background:rgba(5,13,22,0.88); backdrop-filter:blur(6px);
+    opacity:0; transition:opacity .25s ease;
+    padding:40px;
+  }
+  #lightbox.open{display:flex;}
+  #lightbox.show{opacity:1;}
+  .lightbox-frame{
+    position:relative; max-width:min(560px,88vw); width:100%;
+    transform:scale(.94); transition:transform .25s ease;
+  }
+  #lightbox.show .lightbox-frame{transform:scale(1);}
+  .lightbox-frame img{
+    width:100%; display:block; border:1px solid var(--line-mid);
+    filter:grayscale(.1) contrast(1.05);
+  }
+  .lightbox-frame .corner{position:absolute; width:18px; height:18px; border:2px solid var(--amber);}
+  .lightbox-frame .c1{top:-7px; left:-7px; border-right:none; border-bottom:none;}
+  .lightbox-frame .c2{top:-7px; right:-7px; border-left:none; border-bottom:none;}
+  .lightbox-frame .c3{bottom:-7px; left:-7px; border-right:none; border-top:none;}
+  .lightbox-frame .c4{bottom:-7px; right:-7px; border-left:none; border-top:none;}
+  .lightbox-frame .plate{
+    margin-top:16px; font-family:'Space Mono', monospace; font-size:11.5px; color:var(--text-muted);
+    display:flex; justify-content:space-between; letter-spacing:1px; border-top:1px solid var(--line-mid); padding-top:9px;
+  }
+  #lightbox-close{
+    position:absolute; top:-42px; right:0;
+    font-family:'Space Mono', monospace; font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+    color:var(--text-bright); background:transparent; border:1px solid var(--line-mid); cursor:pointer;
+    padding:8px 14px; display:flex; align-items:center; gap:8px; transition:.2s;
+  }
+  #lightbox-close:hover{border-color:var(--amber); color:var(--amber);}
 
   .hero-log{margin-top:64px;}
   .hero-log svg{width:100%; height:auto; display:block;}
@@ -288,7 +325,7 @@
         <div class="hero-right reveal visible">
           <div class="core-frame">
             <div class="corner c1"></div><div class="corner c2"></div><div class="corner c3"></div><div class="corner c4"></div>
-            <img src="assets/profile.png" alt="Banoth Vasu profile photo" onerror="this.src='https://placehold.co/400x400/0a1c30/ffb648?text=B.VASU'">
+            <img id="profileImg" src="assets/profile.png" alt="Banoth Vasu profile photo" onerror="this.src='https://placehold.co/400x400/0a1c30/ffb648?text=B.VASU'">
             <div class="plate"><span>SPECIMEN 01</span><span>B. VASU</span></div>
           </div>
         </div>
@@ -493,6 +530,15 @@
     </footer>
   </div>
 
+  <div id="lightbox">
+    <div class="lightbox-frame">
+      <button id="lightbox-close" aria-label="Close image viewer">✕ close</button>
+      <div class="corner c1"></div><div class="corner c2"></div><div class="corner c3"></div><div class="corner c4"></div>
+      <img id="lightboxImg" src="" alt="Banoth Vasu profile photo, enlarged">
+      <div class="plate"><span>SPECIMEN 01 — ENLARGED</span><span>B. VASU</span></div>
+    </div>
+  </div>
+
 <script>
   // reveal-on-scroll
   const observer = new IntersectionObserver((entries) => {
@@ -566,6 +612,28 @@
   window.addEventListener('load', () => { buildTicks(); updateDepth(); });
   window.addEventListener('resize', () => { positionStations(); updateDepth(); });
   window.addEventListener('scroll', updateDepth);
+
+  // ===== LIGHTBOX =====
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const profileImg = document.getElementById('profileImg');
+
+  function openLightbox(){
+    lightboxImg.src = profileImg.src;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => lightbox.classList.add('show'));
+  }
+  function closeLightbox(){
+    lightbox.classList.remove('show');
+    document.body.style.overflow = '';
+    setTimeout(() => lightbox.classList.remove('open'), 250);
+  }
+
+  profileImg.addEventListener('click', openLightbox);
+  document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox(); });
 </script>
 </body>
 </html>
